@@ -51,7 +51,7 @@ export default function Header() {
     ]
 
     return (
-        <header className="flex items-center justify-between px-4 md:px-10 py-4 bg-white">
+        <header className="flex items-center justify-between px-4 md:px-10 py-6 bg-white">
             <div className="flex items-center gap-10 md:gap-24 lg:gap-32">
                 <Link href="/">
                     <Image
@@ -74,7 +74,7 @@ export default function Header() {
                                 href={link.link}
                                 onMouseEnter={() => setHovered(link.link)}
                                 onMouseLeave={() => setHovered(null)}
-                                className={`px-2 py-0.5 rounded-sm font-semibold font-montserrat transition duration-200 ring-black
+                                className={`px-2 py-0.5 rounded-sm font-semibold font-poppins transition duration-200 ring-black
                                     ${
                                         isHovered
                                             ? "ring-2" // show ring on hovered
