@@ -1,16 +1,12 @@
 @import "tailwindcss";
 
-:root {
-
-}
 
 @theme inline {
-  --font-montserrat: 'Montserrat', sans-serif;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    
-  }
+  /* Colors */
+  --color-accent: #ed6c5e;
+
+  /* Fonts */
+  --font-montserrat: 'Montserrat', sans-serif;
 }
 

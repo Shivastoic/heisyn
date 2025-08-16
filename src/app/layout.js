@@ -1,5 +1,7 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 // FONTS
 const montserrat = Montserrat({
@@ -12,7 +14,7 @@ const montserrat = Montserrat({
 export const metadata = {
 	// Essential Metadata
 	title: {
-		default: 'Custom Web, App, & AI Solutions | HeiSyn',
+		default: 'Web, App, & AI Solutions | HeiSyn',
 		template: `%s | HeiSyn`,
 	},
 	description: 'We build high-performance websites, mobile apps, and intelligent AI agents. Supercharge your business with custom AI workflows and automation. Get your free consultation today!',
@@ -85,7 +87,9 @@ export default function RootLayout({ children }) {
 			<body
 				className={`${montserrat.variable} antialiased`}
 			>
+				<Header />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
