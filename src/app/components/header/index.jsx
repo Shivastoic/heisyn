@@ -15,7 +15,7 @@ export default function Header() {
 
     // HEADER DATA
     const headerData = {
-        logo: "/logos/logo-black.png",
+        logo: "/logos/logo-white.png",
         alt: "Company Logo",
     }
 
@@ -51,18 +51,17 @@ export default function Header() {
     ]
 
     return (
-        <header className="flex items-center justify-between px-4 md:px-10 py-6 bg-white">
-            <div className="flex items-center gap-10 md:gap-24 lg:gap-32">
-                <Link href="/">
-                    <Image
-                        src={headerData.logo}
-                        alt={headerData.alt}
-                        width={800}
-                        height={300}
-                        className="w-24 md:w-36"
-                    />
-                </Link>
-
+        <header className="flex items-center justify-between px-4 md:px-10 py-4 md:py-6 bg-transparent">
+            <Link href="/">
+                <Image
+                    src={headerData.logo}
+                    alt={headerData.alt}
+                    width={800}
+                    height={300}
+                    className="w-24 md:w-36"
+                />
+            </Link>
+            <div className="flex items-center gap-10">
                 <nav className="hidden md:flex items-center gap-4">
                     {links.map((link, index) => {
                         const isActive = pathname === link.link;
@@ -74,12 +73,12 @@ export default function Header() {
                                 href={link.link}
                                 onMouseEnter={() => setHovered(link.link)}
                                 onMouseLeave={() => setHovered(null)}
-                                className={`px-2 py-0.5 rounded-sm font-semibold font-poppins transition duration-200 ring-black
+                                className={`px-2 py-0.5 rounded-md font-semibold font-poppins transition duration-200 ring-neutral-100 text-neutral-100
                                     ${
                                         isHovered
-                                            ? "ring-2" // show ring on hovered
+                                            ? "ring-2" 
                                             : !hovered && isActive
-                                            ? "ring-2" // show ring on active only if nothing is hovered
+                                            ? "ring-2"
                                             : ""
                                     }`}
                             >
@@ -88,14 +87,15 @@ export default function Header() {
                         );
                     })}
                 </nav>
+                <Link href="/contact" className="hidden md:block">
+                    <button className="group flex items-center gap-2 px-6 py-2 font-montserrat font-semibold border-2 border-neutral-100 text-neutral-100 rounded-full cursor-pointer transition duration-200">
+                        Contact Us
+                        <FaArrowRight className="group-hover:-rotate-45 duration-150" />
+                    </button>
+                </Link>
             </div>
 
-            <Link href="/contact" className="hidden md:block">
-                <button className="group flex items-center gap-2 px-4 py-2 font-montserrat font-medium bg-black text-white rounded-lg hover:ring-2 ring-offset-2 ring-black cursor-pointer transition duration-200">
-                    Contact Us
-                    <FaArrowRight className="group-hover:-rotate-45 duration-150" />
-                </button>
-            </Link>
+            
 
             <MobileHeader links={links} />
         </header>
