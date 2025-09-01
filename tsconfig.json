@@ -21,13 +21,17 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".",                        // 👈 required for path aliases
+    "paths": { "@/*": ["./src/*"] } ,
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/*.js",                             // 👈 add this
+    "**/*.jsx",
   ],
   "exclude": [
     "node_modules"
