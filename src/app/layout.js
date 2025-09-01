@@ -1,8 +1,12 @@
 import { Montserrat, Poppins, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/app/components/header";
-import Footer from "@/app/components/footer";
-import AnimatedBackground from "@/app/components/animatedbg";
+// import Header from "@/app/components/header/index";
+// import Footer from "@/app/components/footer/index";
+// import AnimatedBackground from "@/app/components/animatedbg/index";
+
+import Header from "./components/header";
+import Footer from "./components/footer";
+import AnimatedBackground from "./components/animatedbg";
 
 // FONTS
 const montserrat = Montserrat({

@@ -1,7 +1,6 @@
 
-import Container from "@/app/components/container";
+import Container from "@/app/components/container/index";
 import GlowCard from "@/app/components/glowcard";
-import SpotlightCard from "@/app/components/spotlightcard";
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
 export default function About() {

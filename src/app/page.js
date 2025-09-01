@@ -1,5 +1,5 @@
-import About from "@/app/home/about";
-import Hero from "@/app/home/hero";
+import Hero from "./home/hero";
+import About from "./home/about";
 
 
 export default function Home() {
