@@ -1,5 +1,6 @@
 
 import Container from "@/app/components/container";
+import GlowCard from "@/app/components/glowcard";
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
 export default function About() {
@@ -22,9 +23,15 @@ export default function About() {
                             {data.title}
                         </h2>
                     </div>
-                    <div>
+                    {/* <div className="flex gap-6">
+                        <GlowCard customSize>
+                            <div className="size-96">
 
-                    </div>
+                            </div>
+                        </GlowCard>
+                        <GlowCard />
+                        <GlowCard />
+                    </div> */}
                 </div>
             </Container>
         </section>

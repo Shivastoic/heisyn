@@ -12,6 +12,7 @@ import ShuffleGrid from "@/app/home/hero/suffle/index";
 
 import Image from "next/image";
 import Link from "next/link";
+import OrbitingSkills from "@/app/components/orbit";
 
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
@@ -55,19 +56,15 @@ export default function Hero() {
         });
     }, []);
 
-    const backgroundImage = useMotionTemplate`radial-gradient(185% 140% at 50% 25%, #020617 40%, ${color})`;
     const border = useMotionTemplate`2px solid ${color}`;
     const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
 
     return (
         <motion.section
-            style={{
-                backgroundImage,
-            }}
             className="w-full px-4 pt-12 pb-16 md:pt-26 md:pb-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* FIRST SECTION */}
-                <div className="flex flex-col gap-8 px-6 md:px-20 py-14 md:py-20 items-center justify-center rounded-2xl md:rounded-3xl overflow-hidden relative md:min-h-[80vh]">
+                <div className="flex flex-col gap-8 px-6 md:px-20 pt-14 pb-10 md:py-16 items-center overflow-hidden relative">
                     <p className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent text-base md:text-lg text-center font-jetbrainsmono font-medium">{data.sub_1}</p>
                     <h1 className="text-4xl md:text-6xl text-center font-semibold text-neutral-100 font-montserrat">
                         Transform Your Business with<br/><span className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">AI Automation</span>
@@ -97,9 +94,10 @@ export default function Hero() {
                 </div>
 
                 {/* SECOND SECTION */}
-                <div className="flex flex-col gap-8 p-4 lg:p-6 rounded-2xl overflow-hidden border border-white/5 bg-white/3 backdrop-blur-md">
+                <div className="flex flex-col items-center justify-center gap-8 pb-4 overflow-hidden ">
                     <div className="">
-                        <ShuffleGrid />
+                        {/* <ShuffleGrid /> */}
+                        <OrbitingSkills />
                     </div>
 
                     {/* White rectangle with rounded top-right */}

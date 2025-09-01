@@ -1,7 +1,8 @@
 import { Montserrat, Poppins, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import Header from "@/app/components/header";
+import Footer from "@/app/components/footer";
+import AnimatedBackground from "@/app/components/animatedbg";
 
 // FONTS
 const montserrat = Montserrat({
@@ -99,6 +100,7 @@ export default function RootLayout({ children }) {
 			<body
 				className={`${montserrat.variable} ${poppins.variable} ${jetbrainsmono.variable} antialiased bg-bg-color`}
 			>
+				<AnimatedBackground />
 				<Header />
 				{children}
 				<Footer />
