@@ -1,8 +1,19 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import {
+  useMotionTemplate,
+  useMotionValue,
+  motion,
+  animate,
+} from "framer-motion";
+import ShuffleGrid from "@/app/home/hero/suffle/index";
+
 import Image from "next/image";
+import Link from "next/link";
+
+const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
 export default function Hero() {
     const [active, setActive] = useState("start");
@@ -33,75 +44,71 @@ export default function Hero() {
         percent_text: "Clients Satisfaction",
     };
 
+    const color = useMotionValue(COLORS_TOP[0]);
+
+    useEffect(() => {
+        animate(color, COLORS_TOP, {
+            ease: "easeInOut",
+            duration: 10,
+            repeat: Infinity,
+            repeatType: "mirror",
+        });
+    }, []);
+
+    const backgroundImage = useMotionTemplate`radial-gradient(185% 140% at 50% 25%, #020617 40%, ${color})`;
+    const border = useMotionTemplate`2px solid ${color}`;
+    const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
+
     return (
-        <section className="w-full px-4 pb-6">
+        <motion.section
+            style={{
+                backgroundImage,
+            }}
+            className="w-full px-4 pt-12 pb-16 md:pt-26 md:pb-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
                 {/* FIRST SECTION */}
-                <div className="flex flex-col gap-8 px-6 md:px-20 py-14 md:py-20 items-center justify-center rounded-2xl md:rounded-3xl overflow-hidden relative border border-white/10 bg-white/3 backdrop-blur-lg min-h-[80vh]">
+                <div className="flex flex-col gap-8 px-6 md:px-20 py-14 md:py-20 items-center justify-center rounded-2xl md:rounded-3xl overflow-hidden relative md:min-h-[80vh]">
                     <p className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent text-base md:text-lg text-center font-jetbrainsmono font-medium">{data.sub_1}</p>
                     <h1 className="text-4xl md:text-6xl text-center font-semibold text-neutral-100 font-montserrat">
                         Transform Your Business with<br/><span className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">AI Automation</span>
                     </h1>
-                    <p className="text-neutral-100 text-base md:text-lg text-center font-jetbrainsmono font-medium">{data.sub_2}</p>
+                    <p className="text-neutral-100 text-base md:text-lg text-center font-jetbrainsmono font-medium max-w-[500px]">{data.sub_2}</p>
 
-                    {/* Button group with moving background */}
-                    <div
-                        className="relative flex items-center justify-center gap-4 w-full max-w-[400px] rounded-full p-4"
-                        onMouseLeave={() => setActive("start")}
-                    >
-                        {/* Moving pill */}
-                        <span
-                            className="hidden md:block absolute bg-neutral-100 rounded-full transition-all duration-300 ease-in-out"
+                    
+                    <Link href={"/services"}>
+                        <motion.button
                             style={{
-                                width: "160px",
-                                height: "48px",
-                                transform:
-                                    active === "start" ? "translateX(-90px)" : "translateX(72px)",
+                                border,
+                                boxShadow,
                             }}
-                        ></span>
-
-                        {/* Fixed white pill for < md */}
-                        <span
-                            className="hidden absolute bg-neutral-100 rounded-full"
-                            style={{
-                                width: "160px",
-                                height: "48px",
-                                transform: "translateY(0px)", // fixed behind Learn More
+                            whileHover={{
+                                scale: 1.015,
                             }}
-                        ></span>
-
-                        {/* Get Started (hidden below md) */}
-                        <button
-                            onMouseEnter={() => setActive("start")}
-                            className={`hidden md:block px-6 py-3 rounded-full font-jetbrainsmono font-semibold relative z-10 transition-colors duration-300 ${
-                            active === "start" ? "text-black" : "text-white"
-                            }`}
-                        >
-                            Interested
-                        </button>
-
-                        {/* Learn More */}
-                        <a
-                            href="/docs"
-                            onMouseEnter={() => setActive("learn")}
-                            className={`flex items-center gap-2 px-6 py-3 text-nowrap max-md:text-black max-md:bg-white rounded-full font-jetbrainsmono font-semibold relative z-10 transition-colors duration-300 ${
-                            active === "learn" ? "text-black" : "text-white"
-                            }`}
-                        >
-                            Learn More <FaArrowRight />
-                        </a>
-                    </div>
+                            whileTap={{
+                                scale: 0.985,
+                            }}
+                            className="cursor-pointer group relative flex w-fit items-center gap-2 rounded-full bg-gray-950/10 px-6 py-2 text-gray-50 font-semibold font-montserrat transition-colors hover:bg-gray-950/50"
+                            >
+                            Get Started
+                            <FaArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
+                        </motion.button>
+                    </Link>
+                    
                 </div>
 
                 {/* SECOND SECTION */}
-                <div className="hidden md:block rounded-2xl overflow-hidden border border-white/10 bg-white/3 backdrop-blur-lg relative">
+                <div className="flex flex-col gap-8 p-4 lg:p-6 rounded-2xl overflow-hidden border border-white/5 bg-white/3 backdrop-blur-md">
+                    <div className="">
+                        <ShuffleGrid />
+                    </div>
+
                     {/* White rectangle with rounded top-right */}
-                    <div className="flex items-center gap-6 p-4 rounded-tr-2xl absolute bottom-0 left-0">
+                    <div className="flex items-center gap-3 md:gap-6">
                         <div className="flex items-center">
                             {data.users.map((user, index) => (
                                 <div
                                     key={index}
-                                    className={`size-12 rounded-full overflow-hidden border-2 border-neutral-100 ${
+                                    className={`size-10 md:size-12 rounded-full overflow-hidden border-2 border-neutral-100 ${
                                         index > 0 ? "-ml-4" : ""
                                     }`}
                                 >
@@ -117,21 +124,13 @@ export default function Hero() {
                         </div>
                         <div className="flex items-center gap-2">
                             <p className="font-poppins text-3xl text-neutral-100">{data.percent}</p>
-                            <p className="font-poppins font-medium text-xl text-neutral-100">{data.percent_text}</p>
+                            <p className="font-poppins font-medium text-xs md:text-xl text-neutral-100">{data.percent_text}</p>
                         </div>
                     </div>
-
-                    {/* Extra white block */}
-                    {/* <div className="aspect-video w-52 rounded-2xl absolute top-[50%] right-[50%] bg-white">
-                        
-                    </div> */}
-
-                    {/* White triangle in bottom-left corner */}
-                    {/* <div className="absolute bottom-0 right-0 w-0 h-0 border-b-[80px] border-b-white border-l-[80px] border-l-transparent"></div> */}
 
 
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }

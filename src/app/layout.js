@@ -97,7 +97,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body
-				className={`${montserrat.variable} ${poppins.variable} ${jetbrainsmono.variable} antialiased bg-gradient-to-br from-gray-900 via-black to-gray-800`}
+				className={`${montserrat.variable} ${poppins.variable} ${jetbrainsmono.variable} antialiased bg-bg-color`}
 			>
 				<Header />
 				{children}

@@ -1,7 +1,8 @@
+
 import Container from "@/app/components/container";
+const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
 export default function About() {
-
     // DATA
     const data = {
         title: "AI Solutions that fit your Business Needs",
@@ -9,7 +10,8 @@ export default function About() {
     }
 
     return (
-        <section className="py-12 md:py-26">
+        <section
+            className="py-12 md:py-26">
             <Container>
                 <div className="flex flex-col items-center justify-center gap-10">
                     <div className="flex flex-col items-center justify-center gap-4">
