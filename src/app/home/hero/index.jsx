@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import Aurora from '@/app/components/arora/index';
 import {
   useMotionTemplate,
   useMotionValue,
@@ -61,7 +62,16 @@ export default function Hero() {
 
     return (
         <motion.section
-            className="w-full px-4 pt-12 pb-16 md:pt-26 md:pb-20">
+            className="w-full px-4 pt-12 pb-16 md:pt-26 md:pb-20 relative">
+            <div className="hidden md:block absolute bottom-0 left-0 w-full h-full -z-1 overflow-hidden">
+                <Aurora
+                    colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
+                    blend={0.5}
+                    amplitude={1.0}
+                    speed={0.5}
+                />
+            </div>
+            
             <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* FIRST SECTION */}
                 <div className="flex flex-col gap-8 px-6 md:px-20 pt-14 pb-10 md:py-16 items-center overflow-hidden relative">

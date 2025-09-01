@@ -21,6 +21,7 @@ export default function Header() {
     const [hovered, setHovered] = useState(null);
     const [showHeader, setShowHeader] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const [isScrolled, setIsScrolled] = useState(false); // New state to track scroll
 
     // HEADER DATA
     const headerData = {
@@ -51,17 +52,27 @@ export default function Header() {
     const border = useMotionTemplate`2px solid ${color}`;
     const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
 
-    // scroll hide / show
+    // scroll hide / show and background change
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > lastScrollY) {
+            const currentScrollY = window.scrollY;
+            
+            // Logic to show/hide the header
+            if (currentScrollY > lastScrollY) {
                 // scrolling down
                 setShowHeader(false);
             } else {
                 // scrolling up
                 setShowHeader(true);
             }
-            setLastScrollY(window.scrollY);
+            setLastScrollY(currentScrollY);
+
+            // Logic to change background color
+            if (currentScrollY > 10) { // You can adjust this value
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -73,7 +84,7 @@ export default function Header() {
             initial={{ y: 0 }}
             animate={{ y: showHeader ? 0 : -100 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 md:px-10 py-4 md:py-6 bg-bg-color"
+            className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 md:px-10 py-4 md:py-6 transition-colors duration-300 ${isScrolled ? "bg-bg-color" : "bg-transparent"}`}
         >
             <Link href="/">
                 <Image

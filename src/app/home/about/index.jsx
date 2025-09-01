@@ -1,6 +1,7 @@
 
 import Container from "@/app/components/container";
 import GlowCard from "@/app/components/glowcard";
+import SpotlightCard from "@/app/components/spotlightcard";
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
 export default function About() {
@@ -12,7 +13,7 @@ export default function About() {
 
     return (
         <section
-            className="py-12 md:py-26">
+            className="py-12 px-4 md:py-26">
             <Container>
                 <div className="flex flex-col items-center justify-center gap-10">
                     <div className="flex flex-col items-center justify-center gap-4">
@@ -23,15 +24,30 @@ export default function About() {
                             {data.title}
                         </h2>
                     </div>
-                    {/* <div className="flex gap-6">
-                        <GlowCard customSize>
-                            <div className="size-96">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
+                        <GlowCard customSize className="!bg-white/3 h-96 col-span-3">
+                            <div className="flex flex-col gap-4 p-6">
+                                <h3 className="text-neutral-100 text-3xl font-bold font-montserrat mb-4">Our Mission</h3>
+                                <p className="text-neutral-100 text-lg">To empower businesses with cutting-edge AI solutions that drive innovation, efficiency, and growth.</p>
+                                <div className="w-full h-44">
 
+                                </div>
                             </div>
                         </GlowCard>
-                        <GlowCard />
-                        <GlowCard />
-                    </div> */}
+                        <GlowCard customSize className="!bg-white/3 h-96">
+                            
+                        </GlowCard>
+                        <GlowCard customSize className="!bg-white/3 h-96">
+                            
+                        </GlowCard>
+                        <GlowCard customSize className="!bg-white/3 h-96 col-span-2">
+                            
+                        </GlowCard>
+                        <GlowCard customSize className="!bg-white/3 h-96">
+                            
+                        </GlowCard>
+                        
+                    </div>
                 </div>
             </Container>
         </section>
