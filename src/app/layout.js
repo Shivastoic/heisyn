@@ -1,5 +1,8 @@
-import { Montserrat } from "next/font/google";
+import { Montserrat, Poppins, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "@/app/components/header";
+import Footer from "@/app/components/footer";
+import AnimatedBackground from "@/app/components/animatedbg";
 
 // FONTS
 const montserrat = Montserrat({
@@ -8,11 +11,23 @@ const montserrat = Montserrat({
 	subsets: ["latin"],
 });
 
+const poppins = Poppins({
+	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+	variable: "--font-poppins",
+	subsets: ["latin"],
+});
+
+const jetbrainsmono = JetBrains_Mono({
+	weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+	variable: "--font-jetbrainsmono",
+	subsets: ["latin"],
+});
+
 // METADATA
 export const metadata = {
 	// Essential Metadata
 	title: {
-		default: 'Custom Web, App, & AI Solutions | HeiSyn',
+		default: 'Web, App, & AI Solutions | HeiSyn',
 		template: `%s | HeiSyn`,
 	},
 	description: 'We build high-performance websites, mobile apps, and intelligent AI agents. Supercharge your business with custom AI workflows and automation. Get your free consultation today!',
@@ -83,9 +98,12 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body
-				className={`${montserrat.variable} antialiased`}
+				className={`${montserrat.variable} ${poppins.variable} ${jetbrainsmono.variable} antialiased bg-bg-color`}
 			>
+				<AnimatedBackground />
+				<Header />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
