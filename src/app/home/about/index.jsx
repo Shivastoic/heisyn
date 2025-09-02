@@ -1,7 +1,9 @@
-
 import Container from "@/app/components/container/index";
-import GlowCard from "@/app/components/glowcard";
-const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
+import FlowButton from "@/app/components/flow-button";
+import AboutCard from "@/app/home/about/card";
+import { link } from "fs";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
     // DATA
@@ -10,42 +12,101 @@ export default function About() {
         subtitle: "From idea to implementation",
     }
 
+    // CARD DATA
+    const card_data = [
+        {
+            id: 1,
+            title: "Customer Care Agent",
+            link: "/services/customer-care",
+            description: "24/7 AI-powered customer support that handles inquiries, resolves issues, and provides instant responses to improve customer satisfaction.",
+            icon: "/images/services/customer-care-icon.png",
+            image: "/images/services/customer-care.png", 
+            className: "!bg-white/3 md:col-span-2"
+        },
+        {
+            id: 2,
+            title: "Sales Agent",
+            link: "/services/sales-agent",
+            description: "Intelligent sales automation that qualifies leads, nurtures prospects, and converts visitors into customers with personalized interactions.",
+            icon: "/images/services/customer-care-icon.png",
+            className: "!bg-white/3"
+        },
+        {
+            id: 3,
+            title: "Lead Generator Agent",
+            link: "/services/lead-generator",
+            description: "Advanced lead generation system that identifies, captures, and scores potential customers to maximize your sales pipeline.",
+            icon: "/images/services/customer-care-icon.png",
+            className: "!bg-white/3"
+        },
+        {
+            id: 4,
+            title: "Social Media Marketing Agent",
+            link: "/services/social-media-marketing",
+            description: "Automated social media marketing that creates, schedules, and analyzes posts to boost engagement and grow your online presence.",
+            icon: "/images/services/customer-care-icon.png",
+            image: "/images/services/social-media-marketing.jpg", 
+            className: "!bg-white/3 md:col-span-2"
+        }
+    ];
+
     return (
-        <section
-            className="py-12 px-4 md:py-26">
+        <section className="py-12 px-4 md:py-26">
             <Container>
                 <div className="flex flex-col items-center justify-center gap-10">
                     <div className="flex flex-col items-center justify-center gap-4">
-                        <p className="text-xl md:text-2xl text-center font-jetbrainsmono font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
+                        <p className="text-base md:text-xl lg:text-2xl text-center font-jetbrainsmono font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
                             {data.subtitle}
                         </p>
-                        <h2 className="max-w-[800px] leading-tight text-4xl md:text-5xl font-bold font-montserrat text-center text-gray-100">
+                        <h2 className="max-w-[800px] leading-tight text-4xl md:text-5xl font-semibold font-montserrat text-center text-gray-100">
                             {data.title}
                         </h2>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
-                        <GlowCard customSize className="!bg-white/3 h-96 col-span-3">
-                            <div className="flex flex-col gap-4 p-6">
-                                <h3 className="text-neutral-100 text-3xl font-bold font-montserrat mb-4">Our Mission</h3>
-                                <p className="text-neutral-100 text-lg">To empower businesses with cutting-edge AI solutions that drive innovation, efficiency, and growth.</p>
-                                <div className="w-full h-44">
-
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 w-full">
+                        {card_data.map((card) => (
+                            <AboutCard 
+                                key={card.id} 
+                                className={`${card.className} ${card.image ? 'grid grid-cols-1 md:grid-cols-2 gap-4' : ''} `}
+                            >
+                                <div className="flex flex-col gap-4 justify-between md:gap-6 p-2 md:p-4">
+                                    <div className="flex flex-col gap-4">
+                                        <Image 
+                                            src={card.icon}
+                                            alt={card.title}
+                                            width={40}
+                                            height={40}
+                                            className="object-contain size-20"
+                                        />
+                                        <h3 className="text-neutral-200 text-xl md:text-2xl font-semibold font-poppins">
+                                            {card.title}
+                                        </h3>
+                                        <p className="text-neutral-400 font-poppins text-base">
+                                            {card.description}
+                                        </p>
+                                    </div>
+                                    
+                                    <Link href={card.link}>
+                                        <FlowButton text="Learn More">
+                    
+                                        </FlowButton>
+                                    </Link>
                                 </div>
-                            </div>
-                        </GlowCard>
-                        <GlowCard customSize className="!bg-white/3 h-96">
-                            
-                        </GlowCard>
-                        <GlowCard customSize className="!bg-white/3 h-96">
-                            
-                        </GlowCard>
-                        <GlowCard customSize className="!bg-white/3 h-96 col-span-2">
-                            
-                        </GlowCard>
-                        <GlowCard customSize className="!bg-white/3 h-96">
-                            
-                        </GlowCard>
-                        
+                                {card.image && (
+                                    <div className="aspect-square h-full overflow-hidden rounded-lg">
+                                        <Image
+                                            src={card.image}
+                                            alt={card.title}
+                                            width={1000}
+                                            height={1000}
+                                            className="object-cover object-center aspect-square"
+                                        />
+                                    </div>
+                                )}
+                            </AboutCard>
+                        ))}
+                    </div>
+                    <div className="">
+
                     </div>
                 </div>
             </Container>
