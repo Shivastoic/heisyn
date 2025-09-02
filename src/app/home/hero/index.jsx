@@ -14,6 +14,7 @@ import ShuffleGrid from "@/app/home/hero/suffle/index";
 import Image from "next/image";
 import Link from "next/link";
 import OrbitingSkills from "@/app/components/orbit";
+import Container from "@/app/components/container";
 
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
@@ -72,16 +73,17 @@ export default function Hero() {
                 />
             </div>
             
+            <Container>
             <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* FIRST SECTION */}
-                <div className="flex flex-col gap-8 px-6 md:px-20 pt-14 pb-10 md:py-16 items-center overflow-hidden relative">
-                    <p className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent text-base md:text-lg text-center font-jetbrainsmono font-medium">{data.sub_1}</p>
-                    <h1 className="text-4xl md:text-6xl text-center font-semibold text-neutral-100 font-montserrat">
-                        Transform Your Business with<br/><span className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">AI Automation</span>
-                    </h1>
+                <div className="flex flex-col gap-6 lg:gap-10 px-6 md:px-20 pt-14 pb-10 md:py-16 items-center overflow-hidden relative">
+                    <div className="flex flex-col items-center justify-center gap-4">
+                        <p className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent text-base md:text-xl text-center font-jetbrainsmono font-medium">{data.sub_1}</p>
+                        <h1 className="text-4xl md:text-6xl text-center font-semibold text-neutral-100 font-montserrat">
+                            Transform Your Business with<br/><span className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">AI Automation</span>
+                        </h1>
+                    </div>
                     <p className="text-neutral-100 text-base md:text-lg text-center font-jetbrainsmono font-medium max-w-[500px]">{data.sub_2}</p>
-
-                    
                     <Link href={"/services"}>
                         <motion.button
                             style={{
@@ -139,6 +141,7 @@ export default function Hero() {
 
                 </div>
             </div>
+            </Container>
         </motion.section>
     );
 }
