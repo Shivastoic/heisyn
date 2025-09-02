@@ -9,7 +9,6 @@ import {
   motion,
   animate,
 } from "framer-motion";
-import ShuffleGrid from "@/app/home/hero/suffle/index";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -108,7 +107,6 @@ export default function Hero() {
                 {/* SECOND SECTION */}
                 <div className="flex flex-col items-center justify-center gap-8 pb-4 overflow-hidden ">
                     <div className="">
-                        {/* <ShuffleGrid /> */}
                         <OrbitingSkills />
                     </div>
 
