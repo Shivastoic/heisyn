@@ -16,7 +16,7 @@ function useIsDesktop() {
     return isDesktop;
 }
 
-export default function AboutCard({ children, className }) {
+export default function ServiceCard({ children, className }) {
     const isDesktop = useIsDesktop();
 
     return isDesktop ? (
