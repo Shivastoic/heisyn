@@ -177,7 +177,6 @@ const getInlineStyles = (): React.CSSProperties => {
           shadow-[0_1rem_2rem_-1rem_black] 
           p-4 
           gap-4 
-          backdrop-blur-[5px]
           ${className}
         `}
       >

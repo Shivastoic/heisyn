@@ -1,11 +1,14 @@
 import Container from "@/app/components/container/index";
 import FlowButton from "@/app/components/flow-button";
 import ServiceCard from "@/app/home/services/card";
-import { link } from "fs";
 import Image from "next/image";
 import Link from "next/link";
 
+import GridBG from "@/app/components/gridbg";
+
+
 export default function Services() {
+
     // DATA
     const data = {
         title: "AI Solutions that fit your Business Needs",
@@ -51,7 +54,10 @@ export default function Services() {
     ];
 
     return (
-        <section className="py-12 px-4 md:py-26">
+        <section className="py-12 px-4 md:py-26 relative">
+
+            <GridBG />
+
             <Container>
                 <div className="flex flex-col items-center justify-center gap-10 lg:gap-14">
                     <div className="flex flex-col items-center justify-center gap-4">
