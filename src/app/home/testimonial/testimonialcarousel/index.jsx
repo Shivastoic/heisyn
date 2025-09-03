@@ -1,8 +1,9 @@
 "use client"
 
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import TestimonialCard from "@/app/home/testimonial/testimonialcard";
+import GridBG from "@/app/components/gridbg";
 
 export default function TestimonialCarousel() {
 
@@ -13,48 +14,60 @@ export default function TestimonialCarousel() {
     }
 
     const cards = [
-        { 
+        {
             id: 1,
             cardData: {
-                title: "Excellent Service!",
-                content: "I had a fantastic experience with this company. Their service was top-notch and exceeded my expectations.",
-            },
+                name: "Amit Sharma",
+                designation: "Founder, TechNova Solutions",
+                testimonial: "Heisyn transformed our customer support with their AI Customer Care Agent. Response times dropped drastically, and our customers are happier than ever.",
+                image: "/images/testimonials/user-1.jpg"
+            }
         },
-        { 
-            id: 2, 
+        {
+            id: 2,
             cardData: {
-                title: "Highly Recommend",
-                content: "The team was professional and attentive to my needs. I would definitely recommend them to others.",
-            },
+                name: "Priya Verma",
+                designation: "Marketing Head, BrightWave Media",
+                testimonial: "The AI Social Media Marketing Agent boosted our engagement by 3x. Campaigns are now data-driven, automated, and deliver consistent results.",
+                image: "/images/testimonials/user-2.jpg"
+            }
         },
-        {  
-            id: 3, 
+        {
+            id: 3,
             cardData: {
-                title: "Great Quality",
-                content: "The quality of their work is outstanding. I am extremely satisfied with the results and will be returning for future projects.",
-            },
+                name: "Rahul Mehta",
+                designation: "CEO, GreenMart",
+                testimonial: "Their AI Sales Agent helped us close deals faster than ever. It feels like having a 24/7 sales team working tirelessly in the background.",
+                image: "/images/testimonials/user-3.jpg"
+            }
         },
-        {  
-            id: 4, 
+        {
+            id: 4,
             cardData: {
-                title: "Fantastic Support",
-                content: "Their customer support was prompt and helpful. They addressed all my concerns and made sure I was happy with the service.",
-            },
+                name: "Sneha Kapoor",
+                designation: "Operations Manager, FinEdge",
+                testimonial: "Lead generation used to be a struggle, but Heisyn's AI Lead Gen Agent changed everything. Our pipeline is always full of qualified prospects now.",
+                image: "/images/testimonials/user-1.jpg"
+            }
         },
-        {  
-            id: 5, 
+        {
+            id: 5,
             cardData: {
-                title: "Value for Money",
-                content: "I found their pricing to be very reasonable for the quality of service provided. I got great value for my money.",
-            },
+                name: "Vikram Singh",
+                designation: "Director, Horizon Travels",
+                testimonial: "Automation from Heisyn helped us streamline bookings and customer inquiries. It saved us countless hours and improved overall efficiency.",
+                image: "/images/testimonials/user-2.jpg"
+            }
         },
-        {  
-            id: 6, 
+        {
+            id: 6,
             cardData: {
-                title: "User-Friendly Experience",
-                content: "The entire process was smooth and user-friendly. I appreciated how easy it was to work with them from start to finish.",
-            },
-        },
+                name: "Neha Joshi",
+                designation: "Entrepreneur, StyleNest",
+                testimonial: "Thanks to Heisyn's AI solutions, I can now focus on growing my business while AI handles repetitive customer interactions seamlessly.",
+                image: "/images/testimonials/user-3.jpg"
+            }
+        }
     ];
 
     const targetRef = useRef(null);
@@ -66,7 +79,9 @@ export default function TestimonialCarousel() {
 
     return (
         <div ref={targetRef} className="relative h-[300vh]">
-            <div className="sticky top-0 h-screen flex flex-col gap-10 pt-14 md:pt-20 items-center overflow-hidden">
+            <GridBG />
+            
+            <div className="sticky top-0 h-screen flex flex-col gap-10 pt-14 md:pt-20 items-center overflow-hidden z-10">
                 {/* Header Section - Fixed at top */}
                 <div className="flex flex-col items-center justify-center gap-2 flex-shrink-0">
                     <p className="text-base md:text-xl text-center font-jetbrainsmono font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
