@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { FaBars, FaTimes, FaArrowRight } from "react-icons/fa";
+import FlowButton from "@/app/components/flow-button";
 
 export default function MobileHeader({ links }) {
     const pathname = usePathname();
@@ -62,10 +63,7 @@ export default function MobileHeader({ links }) {
                 {/* Contact Us Button */}
                 <div className="px-6">
                     <Link href="/contact" onClick={() => setMenuOpen(false)}>
-                        <button className="group flex items-center justify-center gap-2 w-full px-4 py-2 font-montserrat font-medium bg-white text-black rounded-lg hover:ring-2 ring-offset-2 ring-black cursor-pointer transition duration-200">
-                            Contact Us
-                            <FaArrowRight className="group-hover:-rotate-45 duration-150" />
-                        </button>
+                        <FlowButton text="Contact Us" />
                     </Link>
                 </div>
             </div>

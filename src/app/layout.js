@@ -1,8 +1,5 @@
-import { Montserrat, Poppins, JetBrains_Mono } from "next/font/google";
+import { Montserrat, Poppins, JetBrains_Mono, Roboto_Flex } from "next/font/google";
 import "./globals.css";
-// import Header from "@/app/components/header/index";
-// import Footer from "@/app/components/footer/index";
-// import AnimatedBackground from "@/app/components/animatedbg/index";
 
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -12,6 +9,12 @@ import AnimatedBackground from "./components/animatedbg";
 const montserrat = Montserrat({
 	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 	variable: "--font-montserrat",
+	subsets: ["latin"],
+});
+
+const roboto_flex = Roboto_Flex({
+	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+	variable: "--font-roboto-flex",
 	subsets: ["latin"],
 });
 
@@ -102,7 +105,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<body
-				className={`${montserrat.variable} ${poppins.variable} ${jetbrainsmono.variable} antialiased bg-bg-color`}
+				className={`${montserrat.variable} ${poppins.variable} ${jetbrainsmono.variable} ${roboto_flex.variable} antialiased bg-bg-color`}
 			>
 				<AnimatedBackground />
 				<Header />

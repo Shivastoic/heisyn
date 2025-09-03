@@ -119,7 +119,7 @@ export default function Services() {
                             Discover how our AI-powered agents can transform your business operations, enhance customer experiences, and drive growth. Explore our full range of solutions tailored to your unique needs.
                         </p>
                         <Link href="/services">
-                            <FlowButton text="Explore More" />
+                            <FlowButton text="Explore More Solutions" />
                         </Link>
                     </div>
                 </div>

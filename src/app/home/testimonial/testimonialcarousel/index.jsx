@@ -26,7 +26,7 @@ export default function TestimonialCarousel() {
         {
             id: 2,
             cardData: {
-                name: "Priya Verma",
+                name: "Kabir Murty",
                 designation: "Marketing Head, BrightWave Media",
                 testimonial: "The AI Social Media Marketing Agent boosted our engagement by 3x. Campaigns are now data-driven, automated, and deliver consistent results.",
                 image: "/images/testimonials/user-2.jpg"
@@ -44,7 +44,7 @@ export default function TestimonialCarousel() {
         {
             id: 4,
             cardData: {
-                name: "Sneha Kapoor",
+                name: "Rahul Shanker",
                 designation: "Operations Manager, FinEdge",
                 testimonial: "Lead generation used to be a struggle, but Heisyn's AI Lead Gen Agent changed everything. Our pipeline is always full of qualified prospects now.",
                 image: "/images/testimonials/user-1.jpg"
