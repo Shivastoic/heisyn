@@ -262,12 +262,12 @@ export default function Header() {
                     className="w-24 md:w-36"
                 />
             </Link>
-            <div className="flex items-center gap-10">
+            {/* <div className="flex items-center gap-10"> */}
                 <NavigationMenu links={links} />
                 <Link href={"/contact"} className="hidden md:block">
                     <FlowButton text="Contact Us" />
                 </Link>
-            </div>
+            {/* </div> */}
 
             <MobileHeader links={links} />
         </motion.header>
