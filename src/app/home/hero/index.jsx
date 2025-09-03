@@ -14,6 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 import OrbitingSkills from "@/app/components/orbit";
 import Container from "@/app/components/container";
+import FlowButton from "@/app/components/flow-button";
 
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
@@ -84,22 +85,7 @@ export default function Hero() {
                     </div>
                     <p className="text-neutral-100 text-base md:text-lg text-center font-jetbrainsmono font-medium max-w-[500px]">{data.sub_2}</p>
                     <Link href={"/services"}>
-                        <motion.button
-                            style={{
-                                border,
-                                boxShadow,
-                            }}
-                            whileHover={{
-                                scale: 1.015,
-                            }}
-                            whileTap={{
-                                scale: 0.985,
-                            }}
-                            className="cursor-pointer group relative flex w-fit items-center gap-2 rounded-full bg-gray-950/10 px-6 py-2 text-gray-50 font-semibold font-montserrat transition-colors hover:bg-gray-950/50"
-                            >
-                            Get Started
-                            <FaArrowRight className="transition-transform group-hover:-rotate-45 group-active:-rotate-12" />
-                        </motion.button>
+                        <FlowButton text="Get Started" />
                     </Link>
                     
                 </div>
