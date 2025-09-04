@@ -47,7 +47,7 @@ export default function GridBG() {
             ></motion.div>
             
             <motion.div 
-                className="absolute top-40 right-20 w-96 h-96 bg-indigo-500/8 rounded-full blur-3xl"
+                className="absolute top-40 right-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"
                 animate={{
                     y: [0, 15, 0],
                     x: [0, -15, 0],
@@ -60,7 +60,7 @@ export default function GridBG() {
             ></motion.div>
             
             <motion.div 
-                className="absolute bottom-20 left-1/3 w-72 h-72 bg-pink-500/6 rounded-full blur-3xl"
+                className="absolute bottom-20 left-1/3 w-72 h-72 bg-pink-500/10 rounded-full blur-3xl"
                 animate={{
                     y: [0, -25, 0],
                     x: [0, 20, 0],
