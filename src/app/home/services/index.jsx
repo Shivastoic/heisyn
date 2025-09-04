@@ -15,43 +15,70 @@ export default function Services() {
         subtitle: "From idea to implementation",
     }
 
-    // CARD DATA
-    const card_data = [
-        {
-            id: 1,
-            title: "Customer Care Agent",
-            link: "/services/customer-care",
-            description: "24/7 AI-powered customer support that handles inquiries, resolves issues, and provides instant responses to improve customer satisfaction.",
-            icon: "/images/services/customer-care-icon.png",
-            image: "/images/services/customer-care.png", 
-            className: "!bg-white/3 md:col-span-2"
-        },
-        {
-            id: 2,
-            title: "Sales Agent",
-            link: "/services/sales-agent",
-            description: "Intelligent sales automation that qualifies leads, nurtures prospects, and converts visitors into customers with personalized interactions.",
-            icon: "/images/services/sales.png",
-            className: "!bg-white/3"
-        },
-        {
-            id: 3,
-            title: "Lead Generator Agent",
-            link: "/services/lead-generator",
-            description: "Advanced lead generation system that identifies, captures, and scores potential customers to maximize your sales pipeline.",
-            icon: "/images/services/lead.png",
-            className: "!bg-white/3"
-        },
-        {
-            id: 4,
-            title: "Social Media Marketing Agent",
-            link: "/services/social-media-marketing",
-            description: "Automated social media marketing that creates, schedules, and analyzes posts to boost engagement and grow your online presence.",
-            icon: "/images/services/social.png",
-            image: "/images/services/social-media-marketing.jpg", 
-            className: "!bg-white/3 md:col-span-2"
-        }
-    ];
+   // CARD DATA
+const card_data = [
+    {
+        id: 1,
+        title: "Voice Calling Agent",
+        link: "/services/voice-calling-agent",
+        description: [
+            "Voice-based customer support",
+            "Sales and lead calls",
+            "Cold calling outreach",
+            "Customer feedback collection",
+            "Follow-up reminders",
+        ],
+        icon: "/images/services/customer-care-icon.png",
+        image: "/images/services/customer-care.png", 
+        className: "!bg-white/3 md:col-span-2"
+    },
+    {
+        id: 2,
+        title: "Business Task Automation",
+        link: "/services/business-task-automation",
+        description: [
+            "Smart quote generator",
+            "Automated invoice follow-ups",
+            "Job profit tracker",
+            "Inbox reply assistant",
+            "Google review follow-ups",
+            "Price monitoring tool",
+        ],
+        icon: "/images/services/sales.png",
+        className: "!bg-white/3"
+    },
+    {
+        id: 3,
+        title: "CRM Automation Integration",
+        link: "/services/crm-automation",
+        description: [
+            "CRM tool integration",
+            "Automated data entry",
+            "Lead scoring system",
+            "Email & task automation",
+            "Custom team workflows",
+        ],
+        icon: "/images/services/lead.png",
+        className: "!bg-white/3"
+    },
+    {
+        id: 4,
+        title: "Social Media Automation",
+        link: "/services/social-media-automation",
+        description: [
+            "Automated content posting",
+            "Smart scheduling",
+            "AI post suggestions",
+            "Performance reports",
+            "Cross-platform management",
+        ],
+        icon: "/images/services/social.png",
+        image: "/images/services/social-media-marketing.jpg", 
+        className: "!bg-white/3 md:col-span-2"
+    }
+];
+
+
 
     return (
         <section className="py-12 px-4 md:py-26 relative">
@@ -83,13 +110,20 @@ export default function Services() {
                                             height={40}
                                             className="object-contain size-16"
                                         />
-                                        <div className="space-y-2">
+                                        <div className="space-y-4">
                                             <h3 className="text-neutral-200 text-xl md:text-2xl font-semibold font-poppins">
                                                 {card.title}
                                             </h3>
-                                            <p className="text-neutral-400 font-poppins text-base">
-                                                {card.description}
-                                            </p>
+                                            <div className="flex flex-col gap-1">
+                                                {
+                                                    card.description.map((item, index) => (
+                                                        <p key={index} className="text-neutral-400 font-poppins text-sm md:text-base before:content-['•'] before:text-pink-500 before:font-bold before:mr-2">
+                                                            {item}
+                                                        </p>
+                                                    ))
+                                                }
+                                            </div>
+                                            
                                         </div>
                                         
                                     </div>
@@ -101,13 +135,13 @@ export default function Services() {
                                     </Link>
                                 </div>
                                 {card.image && (
-                                    <div className="aspect-square h-full overflow-hidden rounded-lg">
+                                    <div className="aspect-square overflow-hidden rounded-lg">
                                         <Image
                                             src={card.image}
                                             alt={card.title}
                                             width={1000}
                                             height={1000}
-                                            className="object-cover object-center aspect-square"
+                                            className="object-cover object-center"
                                         />
                                     </div>
                                 )}

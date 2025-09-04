@@ -178,8 +178,8 @@ export default function Header() {
             ]
         },
         { 
-            link: "/work", 
-            title: "Our Work",
+            link: "/demo", 
+            title: "Demo",
             hasDropdown: true,
             dropdownItems: [
                 { link: "/work/portfolio", title: "Portfolio" },

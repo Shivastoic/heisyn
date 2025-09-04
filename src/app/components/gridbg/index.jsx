@@ -23,7 +23,7 @@ export default function GridBG() {
 
     return (
 
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden -z-1">
             {/* Gradient Background */}
             <div className="absolute inset-0"></div>
             

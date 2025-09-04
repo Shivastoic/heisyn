@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import AnimatedBackground from "./components/animatedbg";
+import PageTransition from "./components/pagetransition";
 
 // FONTS
 const montserrat = Montserrat({
@@ -107,10 +108,12 @@ export default function RootLayout({ children }) {
 			<body
 				className={`${montserrat.variable} ${poppins.variable} ${jetbrainsmono.variable} ${roboto_flex.variable} antialiased bg-bg-color`}
 			>
-				<AnimatedBackground />
-				<Header />
-				{children}
-				<Footer />
+				<PageTransition>
+					<AnimatedBackground />
+					<Header />
+					{children}
+					<Footer />
+				</PageTransition>
 			</body>
 		</html>
 	);
