@@ -16,67 +16,67 @@ export default function Services() {
     }
 
    // CARD DATA
-const card_data = [
-    {
-        id: 1,
-        title: "Voice Calling Agent",
-        link: "/services/voice-calling-agent",
-        description: [
-            "Voice-based customer support",
-            "Sales and lead calls",
-            "Cold calling outreach",
-            "Customer feedback collection",
-            "Follow-up reminders",
-        ],
-        icon: "/images/services/customer-care-icon.png",
-        image: "/images/services/customer-care.png", 
-        className: "!bg-white/3 md:col-span-2"
-    },
-    {
-        id: 2,
-        title: "Business Task Automation",
-        link: "/services/business-task-automation",
-        description: [
-            "Smart quote generator",
-            "Automated invoice follow-ups",
-            "Job profit tracker",
-            "Inbox reply assistant",
-            "Google review follow-ups",
-            "Price monitoring tool",
-        ],
-        icon: "/images/services/sales.png",
-        className: "!bg-white/3"
-    },
-    {
-        id: 3,
-        title: "CRM Automation Integration",
-        link: "/services/crm-automation",
-        description: [
-            "CRM tool integration",
-            "Automated data entry",
-            "Lead scoring system",
-            "Email & task automation",
-            "Custom team workflows",
-        ],
-        icon: "/images/services/lead.png",
-        className: "!bg-white/3"
-    },
-    {
-        id: 4,
-        title: "Social Media Automation",
-        link: "/services/social-media-automation",
-        description: [
-            "Automated content posting",
-            "Smart scheduling",
-            "AI post suggestions",
-            "Performance reports",
-            "Cross-platform management",
-        ],
-        icon: "/images/services/social.png",
-        image: "/images/services/social-media-marketing.jpg", 
-        className: "!bg-white/3 md:col-span-2"
-    }
-];
+    const card_data = [
+        {
+            id: 1,
+            title: "Voice Calling Agent",
+            link: "/services/voice-calling-agent",
+            description: [
+                "Voice-based customer support",
+                "Sales and lead calls",
+                "Cold calling outreach",
+                "Customer feedback collection",
+                "Follow-up reminders",
+            ],
+            icon: "/images/services/customer-care-icon.png",
+            image: "/images/services/customer-care.png", 
+            className: "!bg-white/3 md:col-span-2"
+        },
+        {
+            id: 2,
+            title: "Business Task Automation",
+            link: "/services/business-task-automation",
+            description: [
+                "Smart quote generator",
+                "Automated invoice follow-ups",
+                "Job profit tracker",
+                "Inbox reply assistant",
+                "Google review follow-ups",
+                "Price monitoring tool",
+            ],
+            icon: "/images/services/sales.png",
+            className: "!bg-white/3"
+        },
+        {
+            id: 3,
+            title: "CRM Automation Integration",
+            link: "/services/crm-automation",
+            description: [
+                "CRM tool integration",
+                "Automated data entry",
+                "Lead scoring system",
+                "Email & task automation",
+                "Custom team workflows",
+            ],
+            icon: "/images/services/lead.png",
+            className: "!bg-white/3"
+        },
+        {
+            id: 4,
+            title: "Social Media Automation",
+            link: "/services/social-media-automation",
+            description: [
+                "Automated content posting",
+                "Smart scheduling",
+                "AI post suggestions",
+                "Performance reports",
+                "Cross-platform management",
+            ],
+            icon: "/images/services/social.png",
+            image: "/images/services/social-media-marketing.jpg", 
+            className: "!bg-white/3 md:col-span-2"
+        }
+    ];
 
 
 
