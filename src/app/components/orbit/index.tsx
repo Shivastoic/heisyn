@@ -449,8 +449,7 @@ export default function OrbitingSkills() {
           width: `${containerSize}px`,
           height: `${containerSize}px`,
         }}
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
+        
       >
         {/* Central n8n Logo with enhanced glow */}
         <div 

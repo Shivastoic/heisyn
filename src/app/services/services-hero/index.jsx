@@ -8,6 +8,9 @@ import Link from 'next/link';
 import FlowButton from '@/app/components/flow-button';
 import Container from '@/app/components/container';
 
+import OrbitingSkills from "@/app/components/orbit";
+
+
 const ServicesHero = forwardRef((props, ref) => {
 
     const containerRef = useRef(null);
@@ -19,7 +22,7 @@ const ServicesHero = forwardRef((props, ref) => {
                 <div className='wrapper'>
                     <section className='h-screen w-full grid place-content-center sticky top-0 overflow-hidden'>
                         
-                        <h1 className='text-white 2xl:text-7xl text-5xl hidden md:block px-8 font-medium font-montserrat text-center tracking-tight leading-[120%] relative z-10 cursor-default'>
+                        <h1 className='text-white 2xl:text-6xl text-5xl hidden md:block px-8 font-medium font-montserrat text-center tracking-tight leading-[120%] relative z-10 cursor-default'>
                             Transform Your Business
                             <br />
                             With AI Automation Solutions <br />
@@ -41,13 +44,13 @@ const ServicesHero = forwardRef((props, ref) => {
                             <div className='w-full h-96 bg-white/5 backdrop-blur-sm rounded-lg transition-all duration-300'></div>
                             <div className='w-full h-96 bg-white/5 backdrop-blur-sm rounded-lg transition-all duration-300'></div>
                             <div className='w-full h-96 bg-white/5 backdrop-blur-sm rounded-lg transition-all duration-300'></div>
+                            <div className='w-full h-96 bg-white/5 backdrop-blur-sm rounded-lg transition-all duration-300'></div>
                         </div>
-                        <div className='sticky top-0 h-screen w-full col-span-4 gap-3 grid grid-rows-3'>
-                            <div className='w-full h-full bg-white/5 backdrop-blur-sm rounded-lg transition-all duration-300'></div>
-                            <div className='w-full h-full bg-white/5 backdrop-blur-sm rounded-lg transition-all duration-300'></div>
-                            <div className='w-full h-full bg-white/5 backdrop-blur-sm rounded-lg transition-all duration-300'></div>
+                        <div className='sticky top-0 h-screen w-full col-span-4 gap-3 flex items-center justify-center'>
+                            <OrbitingSkills />
                         </div>
                         <div className='grid gap-3 col-span-4'>
+                            <div className='w-full h-96 bg-white/5 backdrop-blur-sm rounded-lg transition-all duration-300'></div>
                             <div className='w-full h-96 bg-white/5 backdrop-blur-sm rounded-lg transition-all duration-300'></div>
                             <div className='w-full h-96 bg-white/5 backdrop-blur-sm rounded-lg transition-all duration-300'></div>
                             <div className='w-full h-96 bg-white/5 backdrop-blur-sm rounded-lg transition-all duration-300'></div>

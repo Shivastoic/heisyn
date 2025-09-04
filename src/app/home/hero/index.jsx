@@ -63,7 +63,7 @@ export default function Hero() {
 
     return (
         <motion.section
-            className="w-full px-4 pt-12 pb-16 md:pt-26 md:pb-20 relative">
+            className="w-full px-4 pt-12 pb-16 md:pt-26 md:pb-20 relative min-h-screen flex items-center justify-center">
             <div className="hidden md:block absolute bottom-0 left-0 w-full h-full -z-1 overflow-hidden">
                 <Aurora
                     colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
@@ -74,13 +74,15 @@ export default function Hero() {
             </div>
             
             <Container>
-            <div className="grid grid-cols-1 lg:grid-cols-2">
+            <div className="">
                 {/* FIRST SECTION */}
-                <div className="flex flex-col gap-6 lg:gap-10 px-6 md:px-20 pt-14 pb-10 md:py-16 items-center overflow-hidden relative">
-                    <div className="flex flex-col items-center justify-center gap-4">
-                        <p className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent text-base md:text-xl text-center font-jetbrainsmono font-medium">{data.sub_1}</p>
-                        <h1 className="text-4xl md:text-6xl text-center font-semibold text-neutral-100 font-montserrat">
-                            Transform Your Business with<br/><span className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">AI Automation</span>
+                <div className="flex flex-col gap-6 lg:gap-10 px-6 md:px-20 pt-14 pb-10 md:py-8 items-center justify-center overflow-hidden relative">
+                    <div className="flex flex-col items-center justify-center gap-4 max-w-screen-lg">
+                        <div className="rounded-full px-6 py-2 border-2 border-white/7 bg-bg-white/5 backdrop-blur-md">
+                            <p className="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent text-base text-center font-jetbrainsmono font-medium">{data.sub_1}</p>
+                        </div>
+                        <h1 className="text-4xl md:text-6xl  text-center font-semibold text-neutral-100 font-montserrat tracking-tight leading-[120%]">
+                            Supercharge Your Business Productivity with<br/><span className="text-4xl md:text-6xl bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">AI Automation</span>
                         </h1>
                     </div>
                     <p className="text-neutral-100 text-base md:text-lg text-center font-jetbrainsmono font-medium max-w-[500px]">{data.sub_2}</p>
@@ -91,12 +93,11 @@ export default function Hero() {
                 </div>
 
                 {/* SECOND SECTION */}
-                <div className="flex flex-col items-center justify-center gap-8 pb-4 overflow-hidden ">
+                {/* <div className="flex flex-col items-center justify-center gap-8 pb-4 overflow-hidden ">
                     <div className="">
                         <OrbitingSkills />
                     </div>
 
-                    {/* White rectangle with rounded top-right */}
                     <div className="flex items-center gap-3 md:gap-6">
                         <div className="flex items-center">
                             {data.users.map((user, index) => (
@@ -123,7 +124,7 @@ export default function Hero() {
                     </div>
 
 
-                </div>
+                </div> */}
             </div>
             </Container>
         </motion.section>
