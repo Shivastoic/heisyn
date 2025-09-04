@@ -11,7 +11,7 @@ export default function About() {
     const containerRef = useRef(null);
 
     return (
-        <section className="pt-20 md:py-28">
+        <section className="py-20 md:py-28">
             <Container>
                 <div className="flex flex-col gap-8 md:gap-16 items-center">
                     <div
