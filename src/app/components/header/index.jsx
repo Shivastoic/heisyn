@@ -115,7 +115,7 @@ const NavigationMenu = ({ links }) => {
                                             duration: 0.2,
                                             ease: "easeOut"
                                         }}
-                                        className="absolute top-full left-0 mt-4 w-64 bg-bg-color/40 backdrop-blur-lg rounded-lg shadow-2xl border border-gray-700/50 overflow-hidden"
+                                        className="absolute top-full left-0 mt-4 w-64 bg-bg-color/80 backdrop-blur-lg rounded-lg shadow-2xl border border-gray-700/50 overflow-hidden"
                                         onMouseEnter={handleDropdownMouseEnter}
                                         onMouseLeave={handleDropdownMouseLeave}
                                     >
