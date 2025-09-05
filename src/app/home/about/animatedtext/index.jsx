@@ -1,5 +1,5 @@
 import { forwardRef, useMemo, useRef, useEffect } from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 function useAnimationFrame(callback) {
   useEffect(() => {
