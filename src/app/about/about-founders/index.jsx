@@ -15,18 +15,18 @@ const iconMap = {
 
 const projects = [
     {
-        title: "Sanskar Dubey",
-        src: "/images/founders/sanskar.jpg",
-        color: "#8C8C8C",
-        mainLink: "https://www.linkedin.com/in/sanskardev/",
-        
-    },
-    {
         title: "Shiva Pandey",
         src: "/images/founders/shiva.webp",
         color: "#000000",
         mainLink: "https://shiva-pandey.netlify.app/",
        
+    },
+    {
+        title: "Sanskar Dubey",
+        src: "/images/founders/sanskar.jpg",
+        color: "#8C8C8C",
+        mainLink: "https://www.linkedin.com/in/sanskardev/",
+        
     },
     {
         title: "Zaid Sayyed",
