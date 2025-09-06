@@ -260,7 +260,7 @@ export default function Header() {
                     alt={headerData.alt}
                     width={800}
                     height={300}
-                    className="w-24 md:w-36"
+                    className="w-24 md:w-32"
                 />
             </Link>
 

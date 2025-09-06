@@ -5,10 +5,10 @@ export default function Socials() {
         <section className="lg:col-span-2 grid justify-center w-full gap-16">
             <h2 className="text-white/60 text-2xl text-center font-semibold font-montserrat">Get In Touch With Us !</h2>
             <div className="grid justify-center gap-4">
-                <FlipLink href="https://linkedin.com/in/vaib215" color="linkedin">. Linkedin</FlipLink>
+                <FlipLink href="https://www.linkedin.com/in/shiva-pandey-dev/" color="linkedin">. Linkedin</FlipLink>
                 <FlipLink href="https://wa.me/918074730610" color="whatsapp">Whatsapp .</FlipLink>
                 <FlipLink href="mailto:shivapandey9898@gmail.com" color="email">. Gmail</FlipLink>
-                <FlipLink href="https://instagram.com/thisis_vaib" color="instagram">Instagram .</FlipLink>
+                <FlipLink href="https://www.instagram.com/shiva_pandey_o/" color="instagram">Instagram .</FlipLink>
             </div>
         </section>
     );
