@@ -18,7 +18,7 @@ const projects = [
         title: "Shiva Pandey",
         src: "/images/founders/shiva.webp",
         color: "#000000",
-        mainLink: "https://shiva-pandey.netlify.app/",
+        mainLink: "https://shivapandey.vercel.app/",
        
     },
     {
@@ -57,7 +57,7 @@ export default function AboutFounders() {
 
                     projects.map( (project, index) => {
 
-                        return <FounderProject index={index} title={project.title} links={project.links} mainLink={project.mainLink} setModal={setModal} key={index} />
+                        return <FounderProject index={index} title={project.title} links={project.links} mainLink={project.mainLink} src={project.src} setModal={setModal} key={index} />
 
                     })
 
