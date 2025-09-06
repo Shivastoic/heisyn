@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaMailBulk, FaWhatsapp, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Container from "@/app/components/container";
 
 export default function Footer() {
@@ -16,44 +16,31 @@ export default function Footer() {
 
     const defaultSections = [
         {
-            title: "Product",
+            title: "Services",
             links: [
-                { name: "Overview", href: "#" },
-                { name: "Pricing", href: "#" },
-                { name: "Marketplace", href: "#" },
-                { name: "Features", href: "#" },
+                { name: "Overview", href: "/services" },
+                { name: "Buy Workflows", href: "/workflows" },
             ],
         },
         {
             title: "Company",
             links: [
-                { name: "About", href: "#" },
-                { name: "Team", href: "#" },
-                { name: "Blog", href: "#" },
-                { name: "Careers", href: "#" },
-            ],
-        },
-        {
-            title: "Resources",
-            links: [
-                { name: "Help", href: "#" },
-                { name: "Sales", href: "#" },
-                { name: "Advertise", href: "#" },
-                { name: "Privacy", href: "#" },
+                { name: "About", href: "/about" },
+                { name: "Careers", href: "/career" },
+                { name: "Contact US", href: "/contact" },
             ],
         },
     ];
 
     const defaultSocialLinks = [
-        { icon: <FaInstagram className="size-5" />, href: "#", label: "Instagram" },
-        { icon: <FaFacebook className="size-5" />, href: "#", label: "Facebook" },
-        { icon: <FaTwitter className="size-5" />, href: "#", label: "Twitter" },
-        { icon: <FaLinkedin className="size-5" />, href: "#", label: "LinkedIn" },
+        { icon: <FaLinkedin className="size-5" />, href: "https://www.linkedin.com/in/shiva-pandey-dev/", label: "LinkedIn" },
+        { icon: <FaMailBulk className="size-5" />, href: "mailto:shivapandey9898@gmail.com", label: "Mail" },
+        { icon: <FaWhatsapp className="size-5" />, href: "https://wa.me/918074730610", label: "Whatsapp" },
+        { icon: <FaInstagram className="size-5" />, href: "https://www.instagram.com/shiva_pandey_o/", label: "Instagram" },
     ];
 
     const defaultLegalLinks = [
-        { name: "Terms and Conditions", href: "#" },
-        { name: "Privacy Policy", href: "#" },
+        { name: "Terms and Conditions", href: "/career/terms-and-conditions" },
     ];
 
     return (
@@ -72,7 +59,7 @@ export default function Footer() {
                                     />
                                 </a>
                             </div>
-                            <p className="max-w-[70%] text-neutral-200/60 text-sm font-poppins">
+                            <p className="text-neutral-200/60 text-sm font-poppins">
                                 {data.description}
                             </p>
                             <ul className="flex items-center space-x-6">
@@ -85,11 +72,11 @@ export default function Footer() {
                                 ))}
                             </ul>
                         </div>
-                        <div className="grid w-full gap-6 md:grid-cols-3 lg:gap-20">
+                        <div className="grid gap-6 md:grid-cols-2  lg:gap-20">
                             {defaultSections.map((section, sectionIdx) => (
-                                <div key={sectionIdx}>
+                                <div key={sectionIdx} className="min-w-48">
                                     <h3 className="mb-4 text-neutral-200 font-semibold font-poppins">{section.title}</h3>
-                                    <ul className="space-y-3">
+                                    <ul className="space-y-3 ">
                                         {section.links.map((link, linkIdx) => (
                                             <li
                                                 key={linkIdx}
