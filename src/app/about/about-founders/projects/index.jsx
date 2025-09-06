@@ -1,8 +1,9 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 
-export default function FounderProject({index, title, setModal, mainLink}) {
+export default function FounderProject({index, title, setModal, mainLink, src}) {
 
     return (
         <div 
@@ -19,6 +20,13 @@ export default function FounderProject({index, title, setModal, mainLink}) {
                     {title}
                 </h2>
                 <div className="flex items-center gap-4">
+                    <Image 
+                        src={src}
+                        alt={title}
+                        width={50}
+                        height={50}
+                        className='md:hidden size-14 rounded-full object-cover'
+                    />
                     <p className="text-neutral-100 hidden md:block text-sm md:text-base font-montserrat transition-all duration-500 group-hover:translate-x-2">
                         Co Founder
                     </p>

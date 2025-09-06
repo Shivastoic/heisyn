@@ -104,21 +104,32 @@ const ServicesHero = forwardRef((props, ref) => {
         <ReactLenis root>
             <section className='pb-16 md:pb-20 relative' ref={ref}>
                 <GridBG />
-                <div className='wrapper'>
-                    <section className='h-screen w-full grid place-content-center sticky top-0 overflow-hidden'>
+                <div className=''>
+                    <div className='h-screen w-full grid place-content-center sticky top-0 overflow-hidden px-4'>
                         
-                        <h1 className='text-white 2xl:text-6xl text-5xl hidden md:block px-8 font-medium font-montserrat text-center tracking-tight leading-[120%] relative z-10 cursor-default'>
+                        <h1 className='text-white text-4xl md:hidden font-medium font-montserrat text-center tracking-tight leading-[120%] relative z-10 cursor-default'>
                             Transform Your Business
-                            <br />
-                            With AI Automation Solutions <br />
-                            Discover Our Services 👇
-                        </h1>
-                        <h1 className='text-white text-5xl md:hidden px-8 font-medium font-montserrat text-center tracking-tight leading-[120%] relative z-10 cursor-default'>
-                            Transform Your Business
+                            
                             With AI Automation Solutions
-                            Discover Our Services 👇
+                            Discover Our Services <br />👇
                         </h1>
-                    </section>
+                        <div
+                            ref={containerRef}
+                            style={{position: 'relative'}}
+                            className="hidden md:flex flex-col gap-6 justify-center items-center max-w-[1000px]"
+                        >
+                            <VariableProximity
+                                label={'Transform Your Business With AI Automation Solutions Discover Our Services'}
+                                className={'text-neutral-100 lg:text-6xl text-center leading-tight cursor-default'}
+                                fromFontVariationSettings="'wght' 400, 'opsz' 9"
+                                toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                                containerRef={containerRef}
+                                radius={100}
+                                falloff='linear'
+                            />
+                            <span className=' lg:text-6xl'>👇</span>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Desktop animated cards (above md screens) */}

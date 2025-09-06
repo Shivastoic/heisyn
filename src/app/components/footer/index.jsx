@@ -11,7 +11,7 @@ export default function Footer() {
             alt: "logo",
         },
         description: "A collection of components for your startup business or side project.",
-        copyright: "© 2024 Shadcnblocks.com. All rights reserved.",
+        copyright: "© 2025 Heisyn.com All rights reserved.",
     }
 
     const defaultSections = [
