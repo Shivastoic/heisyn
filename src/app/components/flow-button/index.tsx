@@ -10,7 +10,7 @@ export default function FlowButton({ text = "Modern Button" }: { text?: string }
             {/* Static gradient for smoother transition */}
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500/60 via-red-500/60 to-blue-500/60 opacity-0 animate-pulse group-hover:rounded-full transition-all duration-[600ms]"></div>
             
-            <button className="group relative flex items-center gap-1 overflow-hidden rounded-full bg-bg-color/90 py-2 px-8 md:py-3 text-sm font-poppins font-medium text-neutral-200 cursor-pointer transition-all duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] hover:text-black hover:rounded-full active:scale-[0.95] w-full">
+            <button className="group relative flex items-center gap-1 overflow-hidden rounded-full bg-bg-color/90 px-8 py-2 text-sm font-poppins font-medium text-neutral-200 cursor-pointer transition-all duration-[600ms] ease-[cubic-bezier(0.23,1,0.32,1)] hover:text-black hover:rounded-full active:scale-[0.95] w-full">
                 {/* Left arrow (arr-2) */}
                 <FaArrowRight 
                     className="absolute w-4 h-4 left-[-25%] z-[9] group-hover:left-4 transition-all duration-[800ms] ease-[cubic-bezier(0.34,1.56,0.64,1)]" 
