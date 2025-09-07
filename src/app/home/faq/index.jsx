@@ -105,7 +105,7 @@ export default function FAQ() {
                                                     animate={{ y: 0 }}
                                                     exit={{ y: -10 }}
                                                     transition={{ delay: 0.1 }}
-                                                    className="text-neutral-200/80 leading-relaxed font-poppins text-sm md:text-base"
+                                                    className="text-neutral-200/70 leading-relaxed font-poppins text-sm md:text-base"
                                                 >
                                                     {faq.answer}
                                                 </motion.p>
