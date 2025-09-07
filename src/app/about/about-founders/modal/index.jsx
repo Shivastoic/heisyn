@@ -52,7 +52,7 @@ export default function FounderModal({ modal, projects }) {
                 variants={scaleAnimation} 
                 initial="initial" 
                 animate={active ? "enter" : "closed"} 
-                className={`size-44 sm:size-52 lg:size-72 rounded-full absolute bg-white overflow-hidden flex items-center justify-center pointer-events-none`}
+                className={`size-44 sm:size-52 lg:size-72 rounded-full absolute overflow-hidden flex items-center justify-center pointer-events-none`}
             >
                 <div 
                     style={{ top: index * -100 + "%" }} 
