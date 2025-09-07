@@ -8,7 +8,7 @@ export default function AboutHero(){
     // DATA
     const data = {
         title: "About Us",
-        description: "We're reimagining how businesses work with AI. Our team builds smart automation that actually makes sense — no fluff, just results that matter.",
+        description: "At Heisyn we're reimagining how businesses work with AI. Our team builds smart automation that actually makes sense — no fluff, just results that matter.",
         subtitle: "What We Do",
         services: [
             "Intelligent workflow automation",

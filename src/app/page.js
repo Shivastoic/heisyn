@@ -5,6 +5,7 @@ import Testimonial from "@/app/home/testimonial";
 import Stats from "@/app/home/stats";
 
 import { ReactLenis } from 'lenis/react';
+import FAQ from "./home/faq";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
                 <Services />
                 <Testimonial />
                 {/* <Stats /> */}
+                <FAQ />
                 <About />
             </main>
         </ReactLenis>

@@ -10,7 +10,7 @@ export default function Footer() {
             src: "/logos/logo-white.png",
             alt: "logo",
         },
-        description: "A collection of components for your startup business or side project.",
+        description: "At Heisyn we're reimagining how businesses work with AI. Our team builds smart automation that actually makes sense — no fluff, just results that matter.",
         copyright: "© 2025 Heisyn.com All rights reserved.",
     }
 
@@ -59,7 +59,7 @@ export default function Footer() {
                                     />
                                 </a>
                             </div>
-                            <p className="text-neutral-200/60 text-sm font-poppins">
+                            <p className="text-neutral-200/60 text-sm font-poppins max-w-96">
                                 {data.description}
                             </p>
                             <ul className="flex items-center space-x-6">
