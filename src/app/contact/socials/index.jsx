@@ -27,7 +27,7 @@ const FlipLink = ({ children, href, color }) => {
     return (
         <a
             href={href}
-            className="group relative block overflow-hidden whitespace-nowrap text-neutral-100/85 font-robotoflex text-5xl font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl"
+            className="group relative block overflow-hidden whitespace-nowrap text-neutral-100/95 font-robotoflex text-5xl font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl"
             style={{
                 lineHeight: 0.75,
             }}

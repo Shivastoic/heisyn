@@ -65,7 +65,7 @@ export default function Footer() {
                             <ul className="flex items-center space-x-6">
                                 {defaultSocialLinks.map((social, idx) => (
                                     <li key={idx} className="font-medium  text-neutral-200/60 hover:text-neutral-200 duration-150">
-                                        <a href={social.href} aria-label={social.label}>
+                                        <a href={social.href} aria-label={social.label} target="_blank">
                                             {social.icon}
                                         </a>
                                     </li>
@@ -76,7 +76,7 @@ export default function Footer() {
                             {defaultSections.map((section, sectionIdx) => (
                                 <div key={sectionIdx} className="min-w-48">
                                     <h3 className="mb-4 text-neutral-200 font-semibold font-poppins">{section.title}</h3>
-                                    <ul className="space-y-3 ">
+                                    <ul className="space-y-2 ">
                                         {section.links.map((link, linkIdx) => (
                                             <li
                                                 key={linkIdx}
