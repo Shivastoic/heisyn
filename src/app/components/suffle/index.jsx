@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
@@ -18,25 +20,6 @@ const shuffle = (array) => {
     return array;
 };
 
-const squareData = [
-    {
-        id: 1,
-        src: "https://images.unsplash.com/photo-1547347298-4074fc3086f0?auto=format&fit=crop&w=1740&q=80",
-    },
-    {
-        id: 2,
-        src: "https://images.unsplash.com/photo-1510925758641-869d353cecc7?auto=format&fit=crop&w=687&q=80",
-    },
-    {
-        id: 3,
-        src: "https://images.unsplash.com/photo-1629901925121-8a141c2a42f4?auto=format&fit=crop&w=687&q=80",
-    },
-    {
-        id: 4,
-        src: "https://images.unsplash.com/photo-1580238053495-b9720401fd45?auto=format&fit=crop&w=687&q=80",
-    },
-];
-
 const generateSquares = (data) => {
     return data.map((sq) => (
         <motion.div
@@ -53,7 +36,7 @@ const generateSquares = (data) => {
     ));
 };
 
-export default function ShuffleGrid() {
+export default function ShuffleGrid({squareData}) {
     const timeoutRef = useRef(null);
     // Render deterministic order first (no shuffle → prevents hydration mismatch)
     const [squares, setSquares] = useState(generateSquares(squareData));

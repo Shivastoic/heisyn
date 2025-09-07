@@ -51,7 +51,6 @@ export default function AboutFounders() {
     return (
 
         <div className="flex items-center justify-center h-full w-full py-16 md:py-20">
-            <GridBG />
             <div className="max-w-[1000px] w-full flex flex-col items-center justify-center">
                 {
 
