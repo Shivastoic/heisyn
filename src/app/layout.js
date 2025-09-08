@@ -33,72 +33,91 @@ const jetbrainsmono = JetBrains_Mono({
 
 // METADATA
 export const metadata = {
-	// Essential Metadata
-	title: {
-		default: 'Web, App, & AI Solutions | HeiSyn',
-		template: `%s | HeiSyn`,
-	},
-	description: 'We build high-performance websites, mobile apps, and intelligent AI agents. Supercharge your business with custom AI workflows and automation. Get your free consultation today!',
-	
-	// New in Next.js 13.3+ for setting a base URL
-	metadataBase: new URL('https://www.heisyn.com'),
+    // Essential Metadata
+    title: {
+        default: 'HeiSyn - AI Automations, Workflows & Intelligent Agents',
+        template: `%s | HeiSyn`,
+    },
+    description:
+        'HeiSyn specializes in AI-powered business automation, n8n workflows, intelligent chatbots, caller AI agents, and social media automations. We design custom AI solutions to streamline operations, boost efficiency, and accelerate business growth. Book your free consultation today.',
 
-	// Keywords (Less important for Google now, but still good practice)
-	keywords: ['web development', 'app development', 'ai agents', 'ai workflows', 'custom software', 'automation services', 'saas development', 'machine learning solutions'],
-	
-	// Author and Creator
-	authors: [{ name: 'HeiSyn', url: 'https://www.heisyn.com' }],
-	creator: 'HeiSyn',
+    // New in Next.js 13.3+ for setting a base URL
+    metadataBase: new URL('https://www.heisyn.com'),
 
-	// Canonical URL
-	alternates: {
-		canonical: '/',
-	},
+    // Keywords (SEO focus)
+    keywords: [
+        'AI automations',
+        'business automation',
+        'n8n workflows',
+        'chatbots',
+        'caller AI agents',
+        'social media automation',
+        'AI solutions',
+        'automation services',
+        'process automation',
+        'intelligent agents',
+    ],
 
-	// Open Graph (OG) for Social Media Sharing (Facebook, LinkedIn, etc.)
-	openGraph: {
-		title: 'Custom Web, App, & AI Solutions | HeiSyn',
-		description: 'We build high-performance websites, mobile apps, and intelligent AI agents. Supercharge your business with custom AI workflows and automation.',
-		url: 'https://www.heisyn.com',
-		siteName: 'HeiSyn',
-		images: [
-			{
-				url: '/og-image.png', // Must be an absolute URL. `metadataBase` will handle this.
-				width: 1200,
-				height: 630,
-				alt: 'Web Development, App Development, and AI Solutions by HeiSyn',
-			},
+    // Author and Creator
+    authors: [{ name: 'HeiSyn', url: 'https://www.heisyn.com' }],
+    creator: 'HeiSyn',
+
+    // Canonical URL
+    alternates: {
+        canonical: '/',
+    },
+
+    // Open Graph (OG) for Social Media Sharing (Facebook, LinkedIn, etc.)
+    openGraph: {
+        title: 'AI Automations, Workflows & Business Solutions | HeiSyn',
+        description:
+            'Transform your business with AI-powered automation. HeiSyn builds custom n8n workflows, chatbots, caller AI agents, and social media automation solutions to drive efficiency and growth.',
+        url: 'https://www.heisyn.com',
+        siteName: 'HeiSyn',
+        images: [
+            {
+                url: '/og-image.png', // Will be resolved with metadataBase
+                width: 1200,
+                height: 630,
+                alt: 'HeiSyn - AI Automations, Workflows & Intelligent Agents',
+            },
+        ],
+        locale: 'en_US',
+        type: 'website',
+    },
+
+    // Twitter Card for Sharing on X (formerly Twitter)
+    twitter: {
+        card: 'summary_large_image',
+        title: 'AI Automations, Workflows & Business Solutions | HeiSyn',
+        description:
+            'HeiSyn delivers AI automations, n8n workflows, chatbots, caller AI agents, and social media automation solutions to help businesses scale smarter.',
+        creator: '@heisyn', // Update with your real handle
+        images: ['/og-image.png'],
+    },
+
+    // Robots configuration
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+
+   icons: {
+		icon: [
+			{ url: '/favicon.ico', type: 'image/x-icon' },
+			{ url: '/favicon.png', type: 'image/png' },
 		],
-		locale: 'en_US',
-		type: 'website',
-	},
-
-	// Twitter Card for Sharing on X (formerly Twitter)
-	twitter: {
-		card: 'summary_large_image',
-		title: 'Custom Web, App, & AI Solutions | HeiSyn',
-		description: 'We build high-performance websites, mobile apps, and intelligent AI agents. Supercharge your business with custom AI workflows and automation.',
-		creator: '@heisyn', // Your Twitter handle
-		images: ['/og-image.png'], // Must be an absolute URL. `metadataBase` will handle this.
-	},
-
-	// Robots file configuration
-	robots: {
-		index: true,
-		follow: true,
-		googleBot: {
-		index: true,
-		follow: true,
-			'max-video-preview': -1,
-			'max-image-preview': 'large',
-			'max-snippet': -1,
-		},
-	},
-	
-	// Icons and Favicons
-	icons: {
-		icon: '/favicon.png',
-		shortcut: '/favicon.png',
+		shortcut: [
+			{ url: '/favicon.ico', type: 'image/x-icon' },
+			{ url: '/favicon.png', type: 'image/png' },
+		],
 	},
 };
 
