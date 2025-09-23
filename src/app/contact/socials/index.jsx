@@ -7,8 +7,8 @@ export default function Socials() {
             <div className="grid justify-center gap-4">
                 <FlipLink href="https://www.linkedin.com/company/heisyn/" color="linkedin">. Linkedin</FlipLink>
                 <FlipLink href="https://wa.me/918074730610" color="whatsapp">Whatsapp .</FlipLink>
-                <FlipLink href="mailto:shivapandey9898@gmail.com" color="email">. Gmail</FlipLink>
-                <FlipLink href="https://www.instagram.com/shiva_pandey_o/" color="instagram">Instagram .</FlipLink>
+                <FlipLink href="mailto:help.heisyn@gmail.com" color="email">. Gmail</FlipLink>
+                <FlipLink href="https://www.instagram.com/heisyn.automation/" color="instagram">Instagram .</FlipLink>
             </div>
         </section>
     );

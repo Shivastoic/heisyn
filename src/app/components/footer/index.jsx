@@ -34,9 +34,9 @@ export default function Footer() {
 
     const defaultSocialLinks = [
         { icon: <FaLinkedin className="size-5" />, href: "https://www.linkedin.com/in/shiva-pandey-dev/", label: "LinkedIn" },
-        { icon: <FaMailBulk className="size-5" />, href: "mailto:shivapandey9898@gmail.com", label: "Mail" },
+        { icon: <FaMailBulk className="size-5" />, href: "mailto:help.heisyn@gmail.com", label: "Mail" },
         { icon: <FaWhatsapp className="size-5" />, href: "https://wa.me/918074730610", label: "Whatsapp" },
-        { icon: <FaInstagram className="size-5" />, href: "https://www.instagram.com/shiva_pandey_o/", label: "Instagram" },
+        { icon: <FaInstagram className="size-5" />, href: "https://www.instagram.com/heisyn.automation/", label: "Instagram" },
     ];
 
     const defaultLegalLinks = [

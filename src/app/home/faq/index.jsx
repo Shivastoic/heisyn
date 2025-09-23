@@ -15,36 +15,36 @@ export default function FAQ() {
 
     const faqData = [
         {
-            question: "What is AI automation and how can it benefit my business?",
-            answer: "AI automation uses artificial intelligence to perform repetitive tasks, analyze data, and make decisions without human intervention. It can increase efficiency by up to 40%, reduce operational costs, minimize human errors, and free up your team to focus on strategic work that drives growth."
+            question: "What is AI automation, and how can it benefit my business?",
+            answer: "Most businesses lose hours every week to repetitive tasks that don’t drive revenue. AI automation eliminates that waste by handling routine work, reducing costs, and freeing your team to focus on growth. Instead of asking “How can we do more with less?” — automation makes it possible."
         },
         {
             question: "How long does it take to implement AI automation solutions?",
-            answer: "Implementation timelines vary based on complexity and scope. Simple automation solutions can be deployed in 1-2 weeks, while comprehensive AI systems typically take 2-4 weeks. We follow an agile approach with regular milestones, so you'll see results throughout the process rather than waiting until the end."
+            answer: "It depends on the complexity of your workflows. Simple automations can go live in just 1–2 weeks, while more advanced systems may take 2–4. But here’s the key: we deliver in stages. That means you’ll see quick wins early, instead of waiting months for results."
         },
         {
             question: "What types of business processes can be automated with AI?",
-            answer: "AI can automate a wide range of processes including customer service chatbots, document processing, data entry, inventory management, lead qualification, invoice processing, quality control, predictive maintenance, email marketing, and financial reporting. We assess your specific workflows to identify the best automation opportunities."
+            answer: "Think about where your team spends the most time on repetitive work. That could be customer support, data entry, invoicing, or lead qualification. AI can automate all of these — and more — so your people spend less time clicking buttons and more time growing the business."
         },
         {
             question: "Do I need technical expertise to use AI automation tools?",
-            answer: "No technical expertise is required. We design user-friendly interfaces and provide comprehensive training for your team. Our solutions include intuitive dashboards, simple controls, and 24/7 support. We also offer ongoing maintenance and updates to ensure smooth operations."
+            answer: "No. Our systems are designed for non-technical teams. With intuitive dashboards and step-by-step onboarding, your staff won’t need to “learn AI” — they’ll just use it. And we provide ongoing support so you’re never left guessing."
         },
         {
             question: "How do you ensure data security and privacy in AI systems?",
-            answer: "We implement enterprise-grade security measures including end-to-end encryption, secure API connections, role-based access controls, and compliance with regulations like GDPR and CCPA. Your data is processed securely and never shared with third parties. We conduct regular security audits and provide detailed compliance reports."
+            answer: "We know your data is your business. That’s why we apply enterprise-grade encryption, GDPR/CCPA compliance, and regular audits. Put simply: your data is always protected and never shared. You stay in control, always."
         },
         {
             question: "What is the ROI of implementing AI automation?",
-            answer: "Most clients see ROI within 6-12 months. Typical benefits include 30-50% reduction in processing time, 60-80% decrease in manual errors, 25-40% cost savings on operational tasks, and improved customer satisfaction scores. We provide detailed ROI projections and track metrics throughout implementation."
+            answer: "Most of our clients recover their investment within 6–12 months. The biggest gains come from faster processing, fewer errors, lower costs, and happier customers. The real ROI? Your team gets time back to focus on revenue-driving activities instead of repetitive work."
         },
         {
             question: "Can AI automation integrate with our existing software systems?",
-            answer: "Yes, our AI solutions are designed to integrate seamlessly with popular business tools like CRM systems, ERP software, accounting platforms, and communication tools. We use APIs and custom connectors to ensure smooth data flow between systems without disrupting your current workflows."
+            answer: "Yes. We design automations to work with your current stack — whether that’s CRM, ERP, finance, or communication tools. Our APIs and connectors ensure a smooth flow of data, without forcing you to rip and replace what you already use."
         },
         {
             question: "What happens if the AI system makes a mistake?",
-            answer: "We implement multiple safeguards including confidence thresholds, human-in-the-loop validation for critical decisions, audit trails, and fallback procedures. Our systems are designed to flag uncertain situations for human review, and we provide monitoring dashboards to track performance and quickly address any issues."
+            answer: "No system is perfect — that’s why ours are built with safeguards. For critical tasks, we set thresholds and include “human-in-the-loop” checks. If the AI is uncertain, it flags the task for review. You’ll always have visibility and control."
         }
     ];
 
