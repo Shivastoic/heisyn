@@ -20,7 +20,7 @@ export default function About() {
                         className="flex justify-center"
                     >
                         <VariableProximity
-                            label={'“Ready to scale smarter with AI? Connect with our team today for a free consultation and let’s build an automation strategy tailored to your needs.”'}
+                            label={' Is now the right time to free your team from repetitive work? The companies that move fastest with automation are the ones that gain the biggest edge. You don’t need to guess where to start — we’ll map it out for you.'}
                             className={'text-neutral-200 text-2xl md:text-4xl lg:text-5xl text-center leading-tight cursor-default'}
                             fromFontVariationSettings="'wght' 400, 'opsz' 9"
                             toFontVariationSettings="'wght' 1000, 'opsz' 40"

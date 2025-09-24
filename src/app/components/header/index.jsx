@@ -164,45 +164,29 @@ export default function Header() {
 
     // HEADER LINKS WITH DROPDOWNS
     const links = [
-        { link: "/", title: "Home" },
+        { 
+            link: "/", 
+            title: "Home" 
+        },
         { 
             link: "/services", 
             title: "Services",
-            hasDropdown: true,
-            dropdownItems: [
-                { link: "/services/web-development", title: "Web Development" },
-                { link: "/services/mobile-apps", title: "Mobile Apps" },
-                { link: "/services/ui-ux-design", title: "UI/UX Design" },
-                { link: "/services/digital-marketing", title: "Digital Marketing" },
-                { link: "/services/e-commerce", title: "E-commerce Solutions" },
-                { link: "/services/consulting", title: "IT Consulting" },
-            ]
+        },
+        // { 
+        //     link: "/workflows", 
+        //     title: "Buy Solutions",
+        // },
+        { 
+            link: "/about", 
+            title: "About Us" 
         },
         { 
-            link: "/workflows", 
-            title: "Buy Workflows",
-            hasDropdown: true,
-            dropdownItems: [
-                { link: "/work/portfolio", title: "Portfolio" },
-                { link: "/work/case-studies", title: "Case Studies" },
-                { link: "/work/testimonials", title: "Client Testimonials" },
-                { link: "/work/success-stories", title: "Success Stories" },
-                { link: "/work/industries", title: "Industries We Serve" },
-            ]
+            link: "/blog", 
+            title: "Blog" 
         },
-        { link: "/about", title: "About Us" },
         { 
             link: "/career", 
-            title: "Career",
-            hasDropdown: true,
-            dropdownItems: [
-                { link: "/career/openings", title: "Job Openings" },
-                { link: "/career/internships", title: "Internships" },
-                { link: "/career/culture", title: "Company Culture" },
-                { link: "/career/benefits", title: "Benefits" },
-                { link: "/career/apply", title: "Apply Now" },
-                { link: "/career/growth", title: "Career Growth" },
-            ]
+            title: "Career",   
         },
     ];
 

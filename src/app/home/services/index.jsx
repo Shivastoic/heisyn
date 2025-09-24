@@ -20,13 +20,12 @@ export default function Services() {
         {
             id: 1,
             title: "Voice Calling Agent",
-            link: "/services/voice-calling-agent",
+            link: "/services",
             description: [
-                "Voice-based customer support",
-                "Sales and lead calls",
-                "Cold calling outreach",
-                "Customer feedback collection",
-                "Follow-up reminders",
+                "Handle every lead instantly without your team lifting a finger",
+                "Sales calls, customer support & feedback collection 24/7",
+                "Follow-up reminders that never miss a beat",
+                "Free up your team to focus on closing deals"
             ],
             icon: "/images/services/customer-care-icon.png",
             image: "/images/services/customer-care.png", 
@@ -35,14 +34,12 @@ export default function Services() {
         {
             id: 2,
             title: "Business Task Automation",
-            link: "/services/business-task-automation",
+            link: "/services",
             description: [
-                "Smart quote generator",
-                "Automated invoice follow-ups",
-                "Job profit tracker",
-                "Inbox reply assistant",
-                "Google review follow-ups",
-                "Price monitoring tool",
+                "Stop chasing invoices manually - automate follow-ups",
+                "Track profit margins without spreadsheet headaches",
+                "Generate smart quotes in seconds, not hours",
+                "Never worry about the little things slowing you down"
             ],
             icon: "/images/services/sales.png",
             className: "!bg-white/3"
@@ -50,13 +47,12 @@ export default function Services() {
         {
             id: 3,
             title: "CRM Automation Integration",
-            link: "/services/crm-automation",
+            link: "/services",
             description: [
-                "CRM tool integration",
-                "Automated data entry",
-                "Lead scoring system",
-                "Email & task automation",
-                "Custom team workflows",
+                "Make your CRM work FOR you, not against you",
+                "Automated data entry - no more hours wasted",
+                "Leads scored and tasks created automatically",
+                "Sales team focuses only on closing deals"
             ],
             icon: "/images/services/lead.png",
             className: "!bg-white/3"
@@ -64,13 +60,12 @@ export default function Services() {
         {
             id: 4,
             title: "Social Media Automation",
-            link: "/services/social-media-automation",
+            link: "/services",
             description: [
-                "Automated content posting",
-                "Smart scheduling",
-                "AI post suggestions",
-                "Performance reports",
-                "Cross-platform management",
+                "Keep your brand active everywhere without the time drain",
+                "Smart scheduling across all platforms",
+                "AI-generated content that actually engages",
+                "Performance reports delivered automatically"
             ],
             icon: "/images/services/social.png",
             image: "/images/services/social-media-marketing.jpg", 
@@ -86,7 +81,7 @@ export default function Services() {
             <GridBG />
 
             <Container>
-                <div className="flex flex-col items-center justify-center gap-10 lg:gap-14">
+                <div className="flex flex-col items-center justify-center gap-10 lg:gap-16">
                     <div className="flex flex-col items-center justify-center gap-2">
                         <p className="text-base md:text-lg text-center font-jetbrainsmono font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
                             {data.subtitle}
@@ -117,13 +112,15 @@ export default function Services() {
                                             <div className="flex flex-col gap-1">
                                                 {
                                                     card.description.map((item, index) => (
-                                                        <p key={index} className="text-neutral-400 font-poppins text-sm md:text-base before:content-['•'] before:text-pink-500 before:font-bold before:mr-2">
-                                                            {item}
-                                                        </p>
+                                                        <div key={index} className="flex items-start gap-2">
+                                                            <span className="text-pink-500 font-bold text-base md:text-base flex-shrink-0">•</span>
+                                                            <p className="text-neutral-400 font-poppins text-sm md:text-base">
+                                                                {item}
+                                                            </p>
+                                                        </div>
                                                     ))
                                                 }
                                             </div>
-                                            
                                         </div>
                                         
                                     </div>
@@ -141,7 +138,7 @@ export default function Services() {
                                             alt={card.title}
                                             width={1000}
                                             height={1000}
-                                            className="object-cover object-center"
+                                            className="object-cover rounded-lg"
                                         />
                                     </div>
                                 )}
@@ -150,10 +147,14 @@ export default function Services() {
                     </div>
                     <div className="flex flex-col justify-center items-center gap-6">
                         <p className="text-center max-w-2xl text-gray-400 font-poppins">
-                            Discover how our AI-powered agents can transform your business operations, enhance customer experiences, and drive growth. Explore our full range of solutions tailored to your unique needs.
+                            Where would automation make the biggest impact for you?<br/>
+                            Some teams use Heisyn to reduce costs. Others to scale faster. Others aim to improve customer experience. The right solution depends on where your bottlenecks are today.
+                        </p>
+                        <p className="text-center max-w-2xl text-gray-400 font-poppins">
+                            👉 Let’s explore together which automation<br/>could help your business to grow faster.
                         </p>
                         <Link href="/services">
-                            <FlowButton text="Explore More Solutions" />
+                            <FlowButton text="Explore Solutions" />
                         </Link>
                     </div>
                 </div>

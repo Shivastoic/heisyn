@@ -26,7 +26,7 @@ export const TestimonialsColumn = (props) => {
 									className="flex flex-col gap-4 justify-between p-8 rounded-3xl border border-white/7 bg-white/5 shadow-lg shadow-primary/10 max-w-lg aspect-[5/3]"
 									key={i}
 								>
-									<p className="text-neutral-300 font-poppins text-sm md:text-base">
+									<p className="text-neutral-400 font-poppins text-sm md:text-base">
 										{text}
 									</p>
 									<div className="flex items-center gap-2 mt-5">
