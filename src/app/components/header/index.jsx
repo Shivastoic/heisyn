@@ -175,7 +175,6 @@ export default function Header() {
         // { 
         //     link: "/workflows", 
         //     title: "Buy Solutions",
-            
         // },
         { 
             link: "/about", 
@@ -187,8 +186,7 @@ export default function Header() {
         },
         { 
             link: "/career", 
-            title: "Career",
-            
+            title: "Career",   
         },
     ];
 
