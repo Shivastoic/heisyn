@@ -7,15 +7,15 @@ export default function AboutHero(){
 
     // DATA
     const data = {
-        title: "About Us",
-        description: "At Heisyn we're reimagining how businesses work with AI. Our team builds smart automation that actually makes sense — no fluff, just results that matter.",
+        title: "Is Your Business Ready to Evolve?",
+        description: "At Heisyn, we transform the way businesses operate by eliminating repetitive tasks through intelligent AI automation.",
         subtitle: "What We Do",
         services: [
-            "Intelligent workflow automation",
-            "Custom AI solutions that scale",
-            "Data-driven decision tools",
-            "Process optimization & analytics",
-            "Smart integration platforms"
+            "Automate Workflow: Streamline operations to reduce manual effort.",
+            "Scale with Custom AI: Implement solutions tailored to your business needs.",
+            "Enable Data-Driven Decisions: Utilize analytics to inform strategic choices.",
+            "Optimize Processes: Enhance efficiency and effectiveness across operations.",
+            "Integrate Seamlessly: Ensure smooth integration with existing systems."
         ],
         stats: [
             { number: "500+", label: "Processes Automated" },
@@ -62,23 +62,28 @@ export default function AboutHero(){
     return (
         <section className="flex items-center min-h-[80vh] py-10"> 
             <Container>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24">
-                    <div className="flex flex-col gap-10 h-full max-">
-                        <div className="flex flex-col gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-12">
+                    <div className="flex flex-col gap-10 h-full lg:col-span-3">
+                        <div className="flex flex-col gap-3">
                             <h2 className="text-4xl md:text-5xl text-neutral-100 font-montserrat font-semibold">
                                 {data.title}
                             </h2>
                             
-                            <p className="text-neutral-100/80 font-poppins leading-relaxed text-sm md:text-base">
+                            <p className="text-neutral-100/80 font-poppins leading-relaxed text-sm md:text-base max-w-[550px]">
                                 {data.description}
                             </p>
                         </div>
 
                         {/* Services Checklist */}
                         <div className="flex flex-col gap-6">
-                            <h3 className="text-2xl text-neutral-100 font-montserrat font-medium">
-                                {data.subtitle}
-                            </h3>
+                            <div className="space-y-3">
+                                <h3 className="text-2xl lg:text-3xl text-neutral-100 font-montserrat font-semibold">
+                                    {data.subtitle}
+                                </h3>
+                                <p className="text-neutral-100/80 font-poppins leading-relaxed text-sm md:text-base max-w-[550px]">
+                                    We understand the challenges of manual processes and the impact they have on efficiency. Our solutions are designed to:
+                                </p>
+                            </div>
                             
                             <ul className="flex flex-col gap-3">
                                 {data.services.map((service, index) => (
@@ -91,23 +96,29 @@ export default function AboutHero(){
                                 ))}
                             </ul>
                         </div>
+                        <div className="space-y-4">
+                            <h3 className="text-2xl lg:text-3xl text-neutral-100 font-montserrat font-semibold">
+                                Our Impact :
+                            </h3>
 
-                        {/* Stats */}
-                        <div className="grid grid-cols-3 gap-4">
-                            {data.stats.map((stat, index) => (
-                                <div key={index} className="text-center bg-white/10 p-4 rounded-lg">
-                                    <div className="text-2xl md:text-3xl font-montserrat font-bold text-neutral-100">
-                                        {stat.number}
+                            {/* Stats */}
+                            <div className="grid grid-cols-3 gap-4">
+                                {data.stats.map((stat, index) => (
+                                    <div key={index} className="text-center bg-white/10 p-4 rounded-lg">
+                                        <div className="text-2xl md:text-3xl font-montserrat font-bold text-neutral-100">
+                                            {stat.number}
+                                        </div>
+                                        <div className="text-sm text-neutral-100/60 font-poppins">
+                                            {stat.label}
+                                        </div>
                                     </div>
-                                    <div className="text-sm text-neutral-100/60 font-poppins">
-                                        {stat.label}
-                                    </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
+                        
                     </div>
 
-                    <div className="flex flex-col gap-8">
+                    <div className="flex flex-col gap-8 lg:col-span-2">
                         <ShuffleGrid squareData={squareData} />
                         <div className="flex items-center justify-center gap-3 md:gap-6">
                             <div className="flex items-center">

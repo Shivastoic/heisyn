@@ -16,7 +16,7 @@ export default function AboutIntro(){
                 className="flex max-w-screen-lg px-6 md:px-0"
             >
                 <VariableProximity
-                    label={'“We’re a team of Tech brains and coffee addicts, building AI Automations that do the boring stuff so you don’t have to”'}
+                    label={'“Our founders bring a wealth of experience and a shared vision for transforming business operations:”'}
                     className={'text-neutral-200 text-3xl md:text-4xl lg:text-5xl text-center leading-tight cursor-default'}
                     fromFontVariationSettings="'wght' 400, 'opsz' 9"
                     toFontVariationSettings="'wght' 1000, 'opsz' 40"
