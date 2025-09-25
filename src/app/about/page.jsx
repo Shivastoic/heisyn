@@ -4,6 +4,7 @@ import AboutIntro from "@/app/about/intro";
 import { ReactLenis } from 'lenis/react';
 import GridBG from "@/app/components/gridbg";
 import AboutHero from "@/app/about/abouthero";
+import AboutCTA from "@/app/about/aboutcta";
 
 export default function About() {
 
@@ -17,6 +18,7 @@ export default function About() {
                         <AboutHero />
                         <AboutIntro />
                         <AboutFounders />
+                        <AboutCTA />
                     </div>
                 </Container>
             </main>
